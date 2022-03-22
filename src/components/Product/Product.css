@@ -1,0 +1,11 @@
+.card:hover {
+  border: 2px solid orange;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.card-footer {
+  background: rgba(255, 224, 179, 1);
+  border-radius: 0px 0px 8px 8px;
+}
+.card-footer:hover {
+  background: orange;
+}
