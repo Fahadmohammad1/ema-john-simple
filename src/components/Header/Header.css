@@ -1,3 +1,9 @@
 .nav-bg {
   background: rgba(28, 43, 53, 1);
 }
+.menu {
+  border-radius: 30px;
+}
+.menu:hover {
+  background: rgba(255, 153, 0, 1);
+}

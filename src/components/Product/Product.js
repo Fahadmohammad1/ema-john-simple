@@ -4,7 +4,7 @@ import React from "react";
 import { Card } from "react-bootstrap";
 import "./Product.css";
 
-const Product = ({ item, itemCount }) => {
+const Product = ({ item, itemCart }) => {
   return (
     <div>
       <Card className="card">
@@ -21,7 +21,7 @@ const Product = ({ item, itemCount }) => {
         </Card.Body>
         <Card.Footer
           onClick={() => {
-            itemCount(item.id);
+            itemCart();
           }}
           className="text-center card-footer"
         >

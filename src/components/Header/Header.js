@@ -6,7 +6,7 @@ import "./Header.css";
 const Header = () => {
   return (
     <div>
-      <Navbar className="nav-bg" expand="lg">
+      <Navbar className="nav-bg fixed-top" expand="lg">
         <Container>
           <Navbar.Brand href="#home">
             <img
@@ -18,13 +18,13 @@ const Header = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
-              <Nav.Link className="text-white" href="#home">
+              <Nav.Link className="menu text-white" href="#home">
                 Order
               </Nav.Link>
-              <Nav.Link className="text-white" href="#link">
+              <Nav.Link className="menu text-white" href="#link">
                 Order review
               </Nav.Link>
-              <Nav.Link className="text-white" href="#link">
+              <Nav.Link className="menu text-white" href="#link">
                 Manage Inventory
               </Nav.Link>
             </Nav>
