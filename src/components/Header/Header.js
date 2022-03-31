@@ -1,12 +1,14 @@
 import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
+import { Link } from "react-router-dom";
+
 import logo from "../../images/Logo.svg";
 import "./Header.css";
 
 const Header = () => {
   return (
     <div>
-      <Navbar className="nav-bg fixed-top" expand="lg">
+      <Navbar className="nav-bg sticky-top" expand="lg">
         <Container>
           <Navbar.Brand href="#home">
             <img
@@ -18,15 +20,15 @@ const Header = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
-              <Nav.Link className="menu text-white" href="#home">
-                Order
-              </Nav.Link>
-              <Nav.Link className="menu text-white" href="#link">
+              <Link to="/shop" className="menu text-white me-4">
+                Shop
+              </Link>
+              <Link to="/orderReview" className="menu text-white me-4">
                 Order review
-              </Nav.Link>
-              <Nav.Link className="menu text-white" href="#link">
+              </Link>
+              <Link to="/inventory" className="menu text-white me-4">
                 Manage Inventory
-              </Nav.Link>
+              </Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
@@ -36,5 +38,3 @@ const Header = () => {
 };
 
 export default Header;
-
-<h2>this is header</h2>;

@@ -21,7 +21,7 @@ const Product = ({ item, itemCart }) => {
         </Card.Body>
         <Card.Footer
           onClick={() => {
-            itemCart();
+            itemCart(item);
           }}
           className="text-center card-footer"
         >
