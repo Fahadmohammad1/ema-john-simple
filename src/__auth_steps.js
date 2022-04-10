@@ -8,7 +8,9 @@
  7. npm install --save react-firebase-hooks
  8. useCreateUserWithEmailAndPassword from react-firebase-hooks
  9.if user created redirect to the expected page
- 10. 
+ 10. useSignInWithEmailAndPassword for sign In
+ 11. Create RequireAuth component ==> check user exist or not and track user location
+ 12. In route wrap protected component by usigng RequireAuth 
 */
 // note:::sendEmailverification = true as a option
 /*
