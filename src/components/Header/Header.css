@@ -3,6 +3,8 @@
 }
 .menu {
   border-radius: 30px;
+  text-decoration: none;
+  padding: 6px;
 }
 .menu:hover {
   background: rgba(255, 153, 0, 1);
