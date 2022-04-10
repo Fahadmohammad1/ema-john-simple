@@ -15,8 +15,9 @@
 // note:::sendEmailverification = true as a option
 /*
  * Hosting steps
- 1. npm install -g firebasee-tools
- 2. firebase login
- 3. firebase init
- 4. firebase deploy
+ 1. npm install -g firebasee-tools (one time for pc)
+ 2. firebase login (one time for pc)
+ 3. firebase init (one time for each project)
+ 4. npm run build
+ 5. firebase deploy (every time )
 */
