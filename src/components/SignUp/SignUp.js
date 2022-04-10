@@ -8,7 +8,7 @@ const SignUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPass, setConfirmPass] = useState("");
-  const [error, setError] = useState("");
+  const [textError, setTextError] = useState("");
   const nevigate = useNavigate();
 
   const handleEmailBlur = (e) => {
@@ -20,19 +20,18 @@ const SignUp = () => {
   const handleConfirmPass = (e) => {
     setConfirmPass(e.target.value);
   };
-  const [createUserWithEmailAndPassword, user] =
+  const [createUserWithEmailAndPassword, user, , error] =
     useCreateUserWithEmailAndPassword(auth);
   if (user) {
     nevigate("/shop");
   }
   const handleCreateUser = (e) => {
     e.preventDefault();
-    if (!password === confirmPass) {
-      setError("password not matched");
+    if (password !== confirmPass) {
+      setTextError("password not matched");
       return;
-    }
-    if (password < 6) {
-      setError("password must be 6 characters or longer");
+    } else if (password < 6) {
+      setTextError("password must be 6 characters or longer");
       return;
     }
     createUserWithEmailAndPassword(email, password);
@@ -68,7 +67,8 @@ const SignUp = () => {
             required
           />
         </Form.Group>
-        <p>{error}</p>
+        <p className="text-danger">{error?.message}</p>
+        <p className="text-danger">{textError ? textError : ""}</p>
         <Button variant="primary" type="submit">
           Sign Up
         </Button>

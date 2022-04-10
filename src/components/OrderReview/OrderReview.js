@@ -1,3 +1,5 @@
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { removeFromDb } from "../../utilities/fakedb";
 import Cart from "../Cart/Cart";
@@ -29,7 +31,11 @@ const OrderReview = () => {
         ))}
       </div>
       <div className="col-3">
-        <Cart cart={cart}></Cart>
+        <Cart cart={cart}>
+          <button className="review-btn border-0 mt-2 me-1 mb-2">
+            Proceed Checkout <FontAwesomeIcon icon={faArrowRight} />
+          </button>
+        </Cart>
       </div>
     </div>
   );
